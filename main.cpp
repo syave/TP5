@@ -8,38 +8,44 @@ using namespace std;
 const string NOMBRE_ARCHIVO = "aeropuertos.txt";
 
 int main() {
-    double s;
-    unsigned t,dN,dI;
-    string n,c,p;
-    string code;
-    //Aeropuerto* puntero;
-    BST<string>* bst = new BST<string>();
+
+
+	BST<string>* bst = new BST<string>();
+
+    double sup;
+    unsigned terminal,destinosNacional,destinosInternacional;
+    string nombre,ciudad,pais;
+    string codigo;
+    Aeropuerto* puntero;
+    puntero = new Aeropuerto();
     ifstream archivo;
     archivo.open(NOMBRE_ARCHIVO);
     if(!archivo.fail()) {
         while (!archivo.eof()) {
-        	Aeropuerto auxiliar;
-            archivo >> code;
-            archivo >> n;
-            auxiliar.setNombre(n);
-            archivo >> c;
-            auxiliar.setCiudad(c);
-            archivo >> p;
-            auxiliar.setPais(p);
-            archivo >> s;
-            auxiliar.setSuperficie(s);
-            archivo >> t;
-            auxiliar.setTerminal(t);
-            archivo >> dN;
-            auxiliar.setDestinosNacionales(dN);
-            archivo >> dI;
-            auxiliar.setDestinosInternacionales(dI);
-            bst->insert(code, auxiliar);
+        	archivo >> codigo;
+            archivo >> nombre;
+            puntero->setNombre(nombre);
+            archivo >> ciudad;
+            puntero->setCiudad(ciudad);
+            archivo >> pais;
+            puntero->setPais(pais);
+            archivo >> sup;
+            puntero->setSuperficie(sup);
+            archivo >> terminal;
+            puntero->setTerminal(terminal);
+            archivo >> destinosNacional;
+            puntero->setDestinosNacionales(destinosNacional);
+            archivo >> destinosInternacional;
+            puntero->setDestinosInternacionales(destinosInternacional);
+            bst->insert(codigo, puntero);
         }
     archivo.close();
     }else{
         cout << "No hay archivo" <<endl;
     }
+
+
+    //In order
     bst->print_in_order();
 
     delete bst;
