@@ -1,6 +1,3 @@
-//
-// Created by carolina on 3/6/20.
-//
 #ifndef ABB_BSTNODE_H
 #define ABB_BSTNODE_H
 
@@ -14,17 +11,16 @@ class BSTNode
 {
 private:
     string codigo;
-    //Aeropuerto *aeropuerto;
+    Aeropuerto *aeropuerto;
     BSTNode<T>* left; //Left children
     BSTNode<T>* right; //Right children
     BSTNode<T>* parent;
 
 public:
-    Aeropuerto aeropuerto;
-    BSTNode(T codigo,Aeropuerto aeropuerto);
+    BSTNode(string codigo,Aeropuerto* aeropuerto);
     T get_codigo();
-    Aeropuerto get_aeropuerto();
-    void set_codigo(T codigo);
+    Aeropuerto* get_aeropuerto();
+    void set_codigo(string codigo);
     void set_right(BSTNode<T>* right, BSTNode<T>* parent);
     void set_left(BSTNode<T>* left, BSTNode<T>* parent);
     void set_left(BSTNode<T>* left);
@@ -39,7 +35,7 @@ public:
 };
 
 template <class T>
-BSTNode<T>::BSTNode(T codigo,Aeropuerto aeropuerto)
+BSTNode<T>::BSTNode(string codigo,Aeropuerto* aeropuerto)
 {
     this->codigo = codigo;
     this->left = NULL;
@@ -55,7 +51,7 @@ T BSTNode<T>::get_codigo()
 }
 
 template <class T>
-Aeropuerto BSTNode<T>::get_aeropuerto() {
+Aeropuerto* BSTNode<T>::get_aeropuerto() {
     return this->aeropuerto;
 }
 
@@ -82,7 +78,7 @@ void BSTNode<T>::set_parent(BSTNode<T> *parent) {
 }
 
 template <class T>
-void BSTNode<T>::set_codigo(T codigo) {
+void BSTNode<T>::set_codigo(string codigo) {
     this->codigo = codigo;
 }
 
