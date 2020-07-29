@@ -1,7 +1,3 @@
-//
-// Created by carolina on 3/6/20.
-//
-
 #include "BSTNode.h"
 #include<iostream>
 #include <string>
@@ -18,7 +14,7 @@ private:
     BSTNode<T>* root;
 
     // methods
-    BSTNode<T>* insert(BSTNode<T>* node, T codigo,Aeropuerto aeropuerto);
+    BSTNode<T>* insert(BSTNode<T>* node, string codigo,Aeropuerto* aeropuerto);
     void print_in_order(BSTNode<T> * node);
     BSTNode<T>* search(BSTNode<T>* node, T codigo);
     T find_min(BSTNode<T>* node);
@@ -36,7 +32,7 @@ public:
 
      // Adds a new node to the actual BST. If its the tree is empty
      // the node inserted will be the root
-    void insert(T codigo,Aeropuerto aeropuerto);
+    void insert(string codigo,Aeropuerto* aeropuerto);
 
     // Prints all the data stored in the BST, sorted from the
     // smallest value to the greatest value.
@@ -76,7 +72,7 @@ BST<T>::BST() {
 }
 
 template <class T>
-BSTNode<T>* BST<T>::insert(BSTNode<T>* node, T codigo,Aeropuerto aeropuerto) {
+BSTNode<T>* BST<T>::insert(BSTNode<T>* node, string codigo,Aeropuerto* aeropuerto) {
 
     if (node == NULL) {
         node = new BSTNode<T>(codigo,aeropuerto);
@@ -93,7 +89,7 @@ BSTNode<T>* BST<T>::insert(BSTNode<T>* node, T codigo,Aeropuerto aeropuerto) {
 }
 
 template <class T>
-void BST<T>::insert(T codigo,Aeropuerto aeropuerto)
+void BST<T>::insert(string codigo,Aeropuerto* aeropuerto)
 {
     this->root = insert(this->root, codigo,aeropuerto);
 }
@@ -105,13 +101,13 @@ void BST<T>::print_in_order(BSTNode<T>* node)
     {
         print_in_order(node->get_left());
         cout<< "Clave: " << node->get_codigo()<<std::endl;
-    	cout << ("* Nombre: " + node->aeropuerto.getNombre())<<std::endl;
-    	cout << ("* Ciudad: " + node->aeropuerto.getCiudad())<<std::endl;
-    	cout << ("* Pais: " + node->aeropuerto.getPais())<<std::endl;
-    	cout << "* Sup: " << node->aeropuerto.getSuperficie()<<std::endl;
-    	cout << "* Terminales: " << node->aeropuerto.getTerminal()<<std::endl;
-    	cout << "* Destinos Nacionales: " << node->aeropuerto.getDestinosNacionales()<<std::endl;
-    	cout << "* Destinos Internacionales: " << node->aeropuerto.getDestinosInternacionales()<<std::endl;
+    	cout << ("* Nombre: " + node->get_aeropuerto()->getNombre())<<std::endl;
+    	cout << ("* Ciudad: " + node->get_aeropuerto()->getCiudad())<<std::endl;
+    	cout << ("* Pais: " + node->get_aeropuerto()->getPais())<<std::endl;
+    	cout << "* Sup: " << node->get_aeropuerto()->getSuperficie()<<std::endl;
+    	cout << "* Terminales: " << node->get_aeropuerto()->getTerminal()<<std::endl;
+    	cout << "* Destinos Nacionales: " << node->get_aeropuerto()->getDestinosNacionales()<<std::endl;
+    	cout << "* Destinos Internacionales: " << node->get_aeropuerto()->getDestinosInternacionales()<<std::endl;
         print_in_order(node->get_right());
     }
 }
