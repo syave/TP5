@@ -2,7 +2,6 @@
 #include<iostream>
 #include <string>
 using namespace std;
-
 #ifndef ABB_BST_H
 #define ABB_BST_H
 
@@ -336,7 +335,6 @@ template <class T>
 bool BST<T>::vacio() {
     return this->raiz == NULL;
 }
-
 
 template <class T>
 void BST<T>::borrarTodo(BSTNode<T>* nodo) {
