@@ -1,53 +1,30 @@
 #include<iostream>
-#include <fstream>
+
 #include "BST.h"
-//#include "Archivo.h"
-#include <string>
+#include "Archivo.h"
 
 using namespace std;
-const string NOMBRE_ARCHIVO = "aeropuertos.txt";
 
 int main() {
+//------------------------BST--------------------------------------//
 
+	Archivo archivo;
+	BST<string> bst;
 
-	BST<string>* bst = new BST<string>();
+	archivo.cargarArchivo(bst);
 
-    double sup;
-    unsigned terminal,destinosNacional,destinosInternacional;
-    string nombre,ciudad,pais;
-    string codigo;
-    Aeropuerto* puntero;
-    puntero = new Aeropuerto();
-    ifstream archivo;
-    archivo.open(NOMBRE_ARCHIVO);
-    if(!archivo.fail()) {
-        while (!archivo.eof()) {
-        	archivo >> codigo;
-            archivo >> nombre;
-            puntero->setNombre(nombre);
-            archivo >> ciudad;
-            puntero->setCiudad(ciudad);
-            archivo >> pais;
-            puntero->setPais(pais);
-            archivo >> sup;
-            puntero->setSuperficie(sup);
-            archivo >> terminal;
-            puntero->setTerminal(terminal);
-            archivo >> destinosNacional;
-            puntero->setDestinosNacionales(destinosNacional);
-            archivo >> destinosInternacional;
-            puntero->setDestinosInternacionales(destinosInternacional);
-            bst->insert(codigo, puntero);
-        }
-    archivo.close();
-    }else{
-        cout << "No hay archivo" <<endl;
-    }
+	//Borrar Aeropuerto------EN PROGRESO
 
+	//Agregar aeropuerto-----FUNCIONA
 
-    //In order
-    bst->print_in_order();
+    //In orden-----FUNCIONA
+    //bst.imprimirInOrden();
 
-    delete bst;
+    //En Ancho-------FUNCIONA
+	//bst.imprimirEnAncho();
+
+	//Busqueda------FUNCIONA,PERO MODIFICAR PARA QUE TIRE EL CODIGO Y NO BOOLEANO
+	//cout<<bst.buscar("EZE")<<endl;
+
 }
 
