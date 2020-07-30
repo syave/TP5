@@ -1,115 +1,123 @@
-//
-// Created by carolina on 3/6/20.
-//
-
 #ifndef ABB_BSTNODE_H
 #define ABB_BSTNODE_H
 
+#include <string>
+#include "Aeropuerto.h"
+
+using namespace std;
+
 template <class T>
-class BSTNode
-{
+class BSTNode {
 private:
-    T data;
-    BSTNode<T>* left; //Left children
-    BSTNode<T>* right; //Right children
-    BSTNode<T>* parent;
+    T codigo;
+    Aeropuerto* aeropuerto;
+    BSTNode<T>* izquierda; //Hijo izquierda
+    BSTNode<T>* derecha; //Hijo derecha
+    BSTNode<T>* padre;
 
 public:
-    BSTNode(T data);
-    T get_data();
-    void set_data(T data);
-    void set_right(BSTNode<T>* right, BSTNode<T>* parent);
-    void set_left(BSTNode<T>* left, BSTNode<T>* parent);
-    void set_left(BSTNode<T>* left);
-    void set_right(BSTNode<T>* right);
-    void set_parent(BSTNode<T>* parent);
-    BSTNode<T>* get_right();
-    BSTNode<T>* get_left();
-    BSTNode<T>* get_parent();
-    bool isLeaf();
-    bool rightChildOnly();
-    bool leftChildOnly();
+    BSTNode(T codigo,Aeropuerto* aeropuerto);
+    string getCodigo();
+    Aeropuerto* getAeropuerto();
+    void setCodigo(T codigo);
+    void setDerecha(BSTNode<T>* derecha, BSTNode<T>* padre);
+    void setIzquierda(BSTNode<T>* izquierda, BSTNode<T>* padre);
+    void setIzquierda(BSTNode<T>* izquierda);
+    void setDerecha(BSTNode<T>* derecha);
+    void setPadre(BSTNode<T>* padre);
+    BSTNode<T>* getDerecha();
+    BSTNode<T>* getIzquierda();
+    BSTNode<T>* getPadre();
+    bool esHoja();
+    bool unicoHijoDerecho();
+    bool unicoHijoIzquierdo();
+    ~BSTNode();
 };
 
 template <class T>
-BSTNode<T>::BSTNode(T data)
-{
-    this->data = data;
-    this->left = NULL;
-    this->right = NULL;
-    this->parent = NULL;
+BSTNode<T>::BSTNode(T codigo,Aeropuerto* aeropuerto) {
+    this->codigo = codigo;
+    this->izquierda = NULL;
+    this->derecha = NULL;
+    this->padre = NULL;
+    this->aeropuerto = aeropuerto;
 }
 
 template <class T>
-T BSTNode<T>::get_data()
-{
-    return this->data;
+string BSTNode<T>::getCodigo() {
+    return this->codigo;
 }
 
 template <class T>
-void BSTNode<T>::set_right(BSTNode<T>* right, BSTNode<T>* parent){
-    this->right = right;
-    this->parent = parent;
+Aeropuerto* BSTNode<T>::getAeropuerto() {
+    return this->aeropuerto;
 }
 
 template <class T>
-void BSTNode<T>::set_right(BSTNode<T>* right){
-    this->right = right;
+void BSTNode<T>::setDerecha(BSTNode<T>* derecha, BSTNode<T>* padre){
+    this->derecha = derecha;
+    this->padre = padre;
 }
 
 template <class T>
-void BSTNode<T>::set_left(BSTNode<T>* left, BSTNode<T>* parent){
-    this->left = left;
-    this->parent = parent;
+void BSTNode<T>::setDerecha(BSTNode<T>* derecha){
+    this->derecha = derecha;
 }
 
 template <class T>
-void BSTNode<T>::set_parent(BSTNode<T> *parent) {
-    this->parent = parent;
+void BSTNode<T>::setIzquierda(BSTNode<T>* izquierda, BSTNode<T>* padre){
+    this->izquierda = izquierda;
+    this->padre = padre;
 }
 
 template <class T>
-void BSTNode<T>::set_data(T data) {
-    this->data = data;
+void BSTNode<T>::setPadre(BSTNode<T> *padre) {
+    this->padre = padre;
+}
+
+template <class T>
+void BSTNode<T>::setCodigo(T codigo) {
+    this->codigo = codigo;
 }
 
 
 template <class T>
-void BSTNode<T>::set_left(BSTNode<T>* left){
-    this->left = left;
+void BSTNode<T>::setIzquierda(BSTNode<T>* izquierda){
+    this->izquierda = izquierda;
 }
 
 template <class T>
-BSTNode<T>* BSTNode<T>::get_right()
-{
-    return this->right;
+BSTNode<T>* BSTNode<T>::getDerecha() {
+    return this->derecha;
 }
 
 template <class T>
-BSTNode<T>* BSTNode<T>::get_left()
-{
-    return this->left;
+BSTNode<T>* BSTNode<T>::getIzquierda() {
+    return this->izquierda;
 }
 
 template <class T>
-BSTNode<T>* BSTNode<T>::get_parent()
-{
-    return this->parent;
+BSTNode<T>* BSTNode<T>::getPadre() {
+    return this->padre;
 }
 
 template <class T>
-bool BSTNode<T>::isLeaf() {
-    return (this->get_left() == NULL && this->get_right() == NULL);
+bool BSTNode<T>::esHoja() {
+    return (this->getIzquierda() == NULL && this->getDerecha() == NULL);
 }
 
 template <class T>
-bool BSTNode<T>::rightChildOnly() {
-    return (this->get_left() == NULL && this->get_right() != NULL);
+bool BSTNode<T>::unicoHijoDerecho() {
+    return (this->getIzquierda() == NULL && this->getDerecha() != NULL);
 }
 
 template <class T>
-bool BSTNode<T>::leftChildOnly() {
-    return (this->get_left() != NULL && this->get_right() == NULL);
+bool BSTNode<T>::unicoHijoIzquierdo() {
+    return (this->getIzquierda() != NULL && this->getDerecha() == NULL);
+}
+template <class T>
+BSTNode<T>::~BSTNode() {
+    delete aeropuerto;
 }
 
 #endif //ABB_BSTNODE_H
