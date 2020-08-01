@@ -14,7 +14,7 @@ private:
     //metodos
     BSTNode<T>* agregar(BSTNode<T>* nodo, T codigo,Aeropuerto* &aeropuerto);
     void imprimirInOrden(BSTNode<T> * nodo);
-    BSTNode<T>* buscar(BSTNode<T>* nodo, T codigo);
+    string buscar(BSTNode<T>* nodo, T codigo);
     T minimo(BSTNode<T>* nodo);
     T maximo(BSTNode<T>* nodo);
     T sucesor(BSTNode<T>* nodo);
@@ -26,6 +26,7 @@ private:
     void imprimirPorNivel(BSTNode<T>* nodo,int nivel);
     void imprimirEnAncho(BSTNode<T>* nodo);
     void imprimirAeropuertos(BSTNode<T>* nodo);
+    void imprimirCodigos(BSTNode<T>* nodo);
 
 public:
     //metodos
@@ -36,7 +37,7 @@ public:
 
     void imprimirInOrden();
 
-    bool buscar(T codigo);
+    string buscar(T codigo);
 
     void imprimirEnAncho();
 
@@ -109,6 +110,11 @@ void BST<T>::imprimirAeropuertos(BSTNode<T>* nodo){
 }
 
 template <class T>
+void BST<T>::imprimirCodigos(BSTNode<T>* nodo){
+    cout<< "Clave: " << nodo->getCodigo()<<std::endl;
+}
+
+template <class T>
 int BST<T>::alturaArbol(BSTNode<T>* nodo) {
 	if(nodo == NULL){
 		return 0;
@@ -129,7 +135,7 @@ void BST<T>::imprimirPorNivel(BSTNode<T>* nodo,int nivel) {
 		return;
 	}
 	if (nivel == 0){
-		imprimirAeropuertos(nodo);
+		imprimirCodigos(nodo);
 	}else{
 		imprimirPorNivel(nodo->getIzquierda(), nivel - 1);
 		imprimirPorNivel(nodo->getDerecha(), nivel - 1);
@@ -164,25 +170,26 @@ void BST<T>::imprimirEnAncho() {
 }
 
 template <class T>
-BSTNode<T>* BST<T>::buscar(BSTNode<T>* nodo, T codigo) {
+string BST<T>::buscar(BSTNode<T>* nodo, T codigo) {
+	string error = "No se encontro dicho aeropuerto";
 	if(nodo != NULL) {
 		if(nodo->getCodigo() == codigo) {
-			return nodo;
+			return codigo;
 		}else if(nodo->getCodigo() > codigo){
 			return buscar(nodo->getIzquierda(), codigo);
 		}else {
 			return buscar(nodo->getDerecha(), codigo);
 		}
 	}else {
-		return nodo;
+		return error;
 	}
 }
 
 template <class T>
-bool BST<T>::buscar(T codigo) {
-    BSTNode<T>* result = buscar(this->raiz, codigo);
+string BST<T>::buscar(T codigo) {
+	string result = buscar(this->raiz, codigo);
 
-    return result != NULL;
+    return result;
 }
 
 template <class T>
@@ -237,9 +244,9 @@ T BST<T>::sucesor(BSTNode<T>* nodo) {
 
 template <class T>
 T BST<T>::sucesor(T codigo) {
-    BSTNode<T>* codigoNodo = this->buscar(this->raiz, codigo);
+	string codigoNodo = this->buscar(this->raiz, codigo);
     // Return the key. If the key is not found or successor is not found, return -1
-    if(codigoNodo == NULL) {
+    if(codigoNodo == "") {
         return NULL;
     }else {
     	return sucesor(codigoNodo);
