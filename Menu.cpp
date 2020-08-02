@@ -89,8 +89,7 @@ void Menu::consultarAeropuerto() {
 	string codigo,resultadoBusqueda;
 	cout << "Ingrese el codigo IATA del aeropuerto a consultar: ";
 	cin >> codigo;
-	resultadoBusqueda = bst.buscar(codigo);
-	cout << resultadoBusqueda <<endl;
+	bst.buscar(codigo);
 }
 
 void Menu::cargarAeropuertos() {
