@@ -1,4 +1,5 @@
 #include "Aeropuerto.h"
+#include <iostream>
 
 Aeropuerto::Aeropuerto() {
     nombre = "";
@@ -59,4 +60,14 @@ void Aeropuerto::setDestinosInternacionales(int DestinosInternaciones) {
 }
 unsigned Aeropuerto::getDestinosInternacionales() {
     return destinosInternacionales;
+}
+
+void Aeropuerto::mostrarAeropuerto() {
+	cout << "* Nombre: " + getNombre()<<endl;
+	cout << "* Ciudad: " + getCiudad()<<endl;
+	cout << "* Pais: " + getPais()<<endl;
+	cout << "* Sup: " << getSuperficie()<<endl;
+	cout << "* Terminales: " << getTerminal()<<endl;
+	cout << "* Destinos Nacionales: " << getDestinosNacionales()<<endl;
+	cout << "* Destinos Internacionales: " << getDestinosInternacionales()<<endl;
 }

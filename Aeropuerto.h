@@ -37,6 +37,8 @@ public:
     void setDestinosInternacionales(int DestinosInternaciones);
     unsigned getDestinosInternacionales();
 
+    void mostrarAeropuerto();
+
 };
 
 
