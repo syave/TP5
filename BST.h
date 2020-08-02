@@ -14,7 +14,7 @@ private:
     //metodos
     BSTNode<T>* agregar(BSTNode<T>* nodo, T codigo,Aeropuerto* &aeropuerto);
     void imprimirInOrden(BSTNode<T> * nodo);
-    string buscar(BSTNode<T>* nodo, T codigo);
+    BSTNode<T>* buscar(BSTNode<T>* nodo, T codigo);
     T minimo(BSTNode<T>* nodo);
     T maximo(BSTNode<T>* nodo);
     T sucesor(BSTNode<T>* nodo);
@@ -37,7 +37,7 @@ public:
 
     void imprimirInOrden();
 
-    string buscar(T codigo);
+    void buscar(T codigo);
 
     void imprimirEnAncho();
 
@@ -170,26 +170,32 @@ void BST<T>::imprimirEnAncho() {
 }
 
 template <class T>
-string BST<T>::buscar(BSTNode<T>* nodo, T codigo) {
-	string error = "No se encontro dicho aeropuerto";
+BSTNode<T>* BST<T>::buscar(BSTNode<T>* nodo, T codigo) {
 	if(nodo != NULL) {
 		if(nodo->getCodigo() == codigo) {
-			return codigo;
+			return nodo;
 		}else if(nodo->getCodigo() > codigo){
 			return buscar(nodo->getIzquierda(), codigo);
 		}else {
 			return buscar(nodo->getDerecha(), codigo);
 		}
 	}else {
-		return error;
+		return NULL;
 	}
 }
 
 template <class T>
-string BST<T>::buscar(T codigo) {
-	string result = buscar(this->raiz, codigo);
+void BST<T>::buscar(T codigo) {
+	T error = "No se ha encontrado dicho aeropuerto";
+	T encontrado = "Se ha encontrado exitosamente el aeropuerto con codigo IATA: ";
+	BSTNode<T>* resultado = buscar(this->raiz, codigo);
 
-    return result;
+    if (resultado == NULL) {
+    	cout << error <<endl;
+    }else {
+    	cout << encontrado << resultado->getCodigo() << endl;
+    	resultado->getAeropuerto()->mostrarAeropuerto();
+    }
 }
 
 template <class T>
@@ -244,9 +250,9 @@ T BST<T>::sucesor(BSTNode<T>* nodo) {
 
 template <class T>
 T BST<T>::sucesor(T codigo) {
-	string codigoNodo = this->buscar(this->raiz, codigo);
+	BSTNode<T>* codigoNodo = this->buscar(this->raiz, codigo);
     // Return the key. If the key is not found or successor is not found, return -1
-    if(codigoNodo == "") {
+    if(codigoNodo == NULL) {
         return NULL;
     }else {
     	return sucesor(codigoNodo);
