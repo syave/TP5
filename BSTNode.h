@@ -20,6 +20,7 @@ public:
     string getCodigo();
     Aeropuerto* getAeropuerto();
     void setCodigo(T codigo);
+    void setAeropuerto(Aeropuerto* aeropuerto);
     void setDerecha(BSTNode<T>* derecha, BSTNode<T>* padre);
     void setIzquierda(BSTNode<T>* izquierda, BSTNode<T>* padre);
     void setIzquierda(BSTNode<T>* izquierda);
@@ -80,6 +81,10 @@ void BSTNode<T>::setCodigo(T codigo) {
     this->codigo = codigo;
 }
 
+template <class T>
+void BSTNode<T>::setAeropuerto(Aeropuerto* aeropuerto){
+	this->aeropuerto = aeropuerto;
+}
 
 template <class T>
 void BSTNode<T>::setIzquierda(BSTNode<T>* izquierda){

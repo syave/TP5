@@ -2,6 +2,7 @@
 #include<iostream>
 #include <string>
 using namespace std;
+
 #ifndef ABB_BST_H
 #define ABB_BST_H
 
@@ -15,10 +16,10 @@ private:
     BSTNode<T>* agregar(BSTNode<T>* nodo, T codigo,Aeropuerto* &aeropuerto);
     void imprimirInOrden(BSTNode<T> * nodo);
     BSTNode<T>* buscar(BSTNode<T>* nodo, T codigo);
-    T minimo(BSTNode<T>* nodo);
-    T maximo(BSTNode<T>* nodo);
-    T sucesor(BSTNode<T>* nodo);
-    T predecesor(BSTNode<T>* nodo);
+    T codigoMinimo(BSTNode<T>* nodo);
+    T codigoMaximo(BSTNode<T>* nodo);
+    T codigoSucesor(BSTNode<T>* nodo);
+    T codigoPredecesor(BSTNode<T>* nodo);
     BSTNode<T>* borrar(BSTNode<T>* nodo, T codigo);
     void borrarTodo(BSTNode<T>* nodo);
 
@@ -27,7 +28,10 @@ private:
     void imprimirEnAncho(BSTNode<T>* nodo);
     void imprimirAeropuertos(BSTNode<T>* nodo);
     void imprimirCodigos(BSTNode<T>* nodo);
-
+    Aeropuerto* aeropuertoSucesor(BSTNode<T>* nodo);
+    //Aeropuerto* aeropuertoPredecesor(BSTNode<T>* nodo);
+    Aeropuerto* minimoAeropuerto(BSTNode<T>* nodo);
+    //Aeropuerto* maximoAeropuerto(BSTNode<T>* nodo);
 public:
     //metodos
 
@@ -41,13 +45,17 @@ public:
 
     void imprimirEnAncho();
 
-    T minimo();
+    T codigoMinimo();
 
-    T maximo();
+    T codigoMaximo();
 
-    T sucesor(T codigo);
+    T codigoSucesor(T codigo);
 
-    T predecesor(T codigo);
+    T codigoPredecesor(T codigo);
+
+    //Puntero al aeropuerto del nodo sucesor
+    Aeropuerto* aeropuertoSucesor(T codigo);
+    //Aeropuerto* aeropuertoPredecesor(T codigo);
 
     void borrar(T codigo);
 
@@ -99,20 +107,15 @@ void BST<T>::imprimirInOrden() {
 
 template <class T>
 void BST<T>::imprimirAeropuertos(BSTNode<T>* nodo){
-    cout<< "Clave: " << nodo->getCodigo()<<std::endl;
-	cout << "* Nombre: " + nodo->getAeropuerto()->getNombre()<<std::endl;
-	cout << "* Ciudad: " + nodo->getAeropuerto()->getCiudad()<<std::endl;
-	cout << "* Pais: " + nodo->getAeropuerto()->getPais()<<std::endl;
-	cout << "* Sup: " << nodo->getAeropuerto()->getSuperficie()<<std::endl;
-	cout << "* Terminales: " << nodo->getAeropuerto()->getTerminal()<<std::endl;
-	cout << "* Destinos Nacionales: " << nodo->getAeropuerto()->getDestinosNacionales()<<std::endl;
-	cout << "* Destinos Internacionales: " << nodo->getAeropuerto()->getDestinosInternacionales()<<std::endl;
+    cout<< "Codigo IATA: " << nodo->getCodigo()<<std::endl;
+    nodo->getAeropuerto()->mostrarAeropuerto();
 }
 
 template <class T>
 void BST<T>::imprimirCodigos(BSTNode<T>* nodo){
-    cout<< "Clave: " << nodo->getCodigo()<<std::endl;
+	cout<< "Codigo IATA: " << nodo->getCodigo()<<std::endl;
 }
+
 
 template <class T>
 int BST<T>::alturaArbol(BSTNode<T>* nodo) {
@@ -154,14 +157,6 @@ void BST<T>::imprimirEnAncho(BSTNode<T>* nodo) {
 		imprimirPorNivel(nodo, i);
 	    cout<<"\n";
 	}
-	/*
-	//TODOS LOS AEROPUERTOS
-	cout<<"Recorrido Por Ancho"<<endl;
-    for (int i=0; i<altura; i++) {
-    	imprimirPorNivel(nodo, i);
-    }
-    cout<<"\n";
-    */
 }
 
 template<class T>
@@ -199,41 +194,41 @@ void BST<T>::buscar(T codigo) {
 }
 
 template <class T>
-T BST<T>::minimo(BSTNode<T>* nodo) {
+T BST<T>::codigoMinimo(BSTNode<T>* nodo) {
 	if(nodo == NULL) {
     	return NULL;
     }else if(nodo->getIzquierda() == NULL){
     	return nodo->getCodigo();
     }else{
-    	return minimo(nodo->getIzquierda());
+    	return codigoMinimo(nodo->getIzquierda());
     }
 }
 
 template <class T>
-T BST<T>::minimo() {
-    return minimo(this->raiz);
+T BST<T>::codigoMinimo() {
+    return codigoMinimo(this->raiz);
 }
 
 template <class T>
-T BST<T>::maximo(BSTNode<T>* nodo) {
+T BST<T>::codigoMaximo(BSTNode<T>* nodo) {
 	if(nodo == NULL) {
 		return NULL;
     }else if(nodo->getDerecha() == NULL) {
     	return nodo->getCodigo();
     }else {
-    	return maximo(nodo->getDerecha());
+    	return codigoMaximo(nodo->getDerecha());
     }
 }
 
 template <class T>
-T BST<T>::maximo() {
-    return maximo(this->raiz);
+T BST<T>::codigoMaximo() {
+    return codigoMaximo(this->raiz);
 }
 
 template <class T>
-T BST<T>::sucesor(BSTNode<T>* nodo) {
+T BST<T>::codigoSucesor(BSTNode<T>* nodo) {
     if (nodo->getDerecha() != NULL) {
-        return minimo(nodo->getDerecha());
+        return codigoMinimo(nodo->getDerecha());
     }
     BSTNode<T>* sucesor = NULL;
     BSTNode<T>* ancestro = this->raiz;
@@ -249,23 +244,59 @@ T BST<T>::sucesor(BSTNode<T>* nodo) {
 }
 
 template <class T>
-T BST<T>::sucesor(T codigo) {
+T BST<T>::codigoSucesor(T codigo) {
 	BSTNode<T>* codigoNodo = this->buscar(this->raiz, codigo);
     // Return the key. If the key is not found or successor is not found, return -1
     if(codigoNodo == NULL) {
         return NULL;
     }else {
-    	return sucesor(codigoNodo);
+    	return codigoSucesor(codigoNodo);
     }
 }
 
 template <class T>
-T BST<T>::predecesor(BSTNode<T> * nodo) {
-    if (nodo->getIzquierda() != NULL)
-    {
-        return maximo(nodo->getIzquierda());
+Aeropuerto* BST<T>::minimoAeropuerto(BSTNode<T>* nodo) {
+	if(nodo == NULL) {
+    	return NULL;
+    }else if(nodo->getIzquierda() == NULL){
+    	return nodo->getAeropuerto();
+    }else{
+    	return minimoAeropuerto(nodo->getIzquierda());
     }
+}
 
+template <class T>
+Aeropuerto* BST<T>::aeropuertoSucesor(BSTNode<T>* nodo) {
+    if (nodo->getDerecha() != NULL) {
+        return minimoAeropuerto(nodo->getDerecha());
+    }
+    BSTNode<T>* sucesor = NULL;
+    BSTNode<T>* ancestro = this->raiz;
+    while(ancestro != nodo) {
+        if(nodo->getAeropuerto() < ancestro->getAeropuerto()) {
+        	sucesor = ancestro;
+        	ancestro = ancestro->getIzquierda();
+        }else {
+        	ancestro = ancestro->getDerecha();
+        }
+    }
+    return sucesor->getAeropuerto();
+}
+template <class T>
+Aeropuerto* BST<T>::aeropuertoSucesor(T codigo) {
+	BSTNode<T>* codigoNodo = this->buscar(this->raiz, codigo);
+    if(codigoNodo == NULL) {
+        return NULL;
+    }else {
+    	return aeropuertoSucesor(codigoNodo);
+    }
+}
+
+template <class T>
+T BST<T>::codigoPredecesor(BSTNode<T> * nodo) {
+    if (nodo->getIzquierda() != NULL) {
+        return codigoMaximo(nodo->getIzquierda());
+    }
     BSTNode<T>* sucesor = NULL;
     BSTNode<T>* ancestro = this->raiz;
     while(ancestro != nodo) {
@@ -280,22 +311,18 @@ T BST<T>::predecesor(BSTNode<T> * nodo) {
 }
 
 template <class T>
-T BST<T>::predecesor(T codigo) {
+T BST<T>::codigoPredecesor(T codigo) {
     BSTNode<T> * codigoNodo = this->buscar(this->raiz, codigo);
 
     if(codigoNodo == NULL) {
         return NULL;
     }else{
-    	return predecesor(codigoNodo);
+    	return codigoPredecesor(codigoNodo);
     }
 }
 
 template <class T>
 BSTNode<T> * BST<T>::borrar(BSTNode<T>* nodo, T codigo) {
-    // The given node is not found in BST
-    if (nodo == NULL)
-        return NULL;
-
     if (nodo->getCodigo() == codigo) {
         if (nodo->esHoja()) {
             nodo = NULL;
@@ -315,16 +342,17 @@ BSTNode<T> * BST<T>::borrar(BSTNode<T>* nodo, T codigo) {
             nodo = nodo->getIzquierda();
             delete aux;
         }
-        // The node has two children (left and right)
-        else {
+        else {  //Nodo con 2 hijos
             // Find successor or predecessor to avoid quarrel
-            T successor_data = this->sucesor(codigo);
+            T codigoSucesor = this->codigoSucesor(codigo);
+            Aeropuerto* aeropuertoSucesor = this->aeropuertoSucesor(codigo);
 
-            // Replace node's key with successor's key
-            nodo->setCodigo(successor_data);
+            //Reemplazo el nodo con los valores del sucesor
+            nodo->setAeropuerto(aeropuertoSucesor);
+            nodo->setCodigo(codigoSucesor);
 
-            // Delete the old successor's key
-            nodo->setDerecha(borrar(nodo->getDerecha(), successor_data));
+            //Borro datos del anterior sucesor
+            nodo->setDerecha(borrar(nodo->getDerecha(), codigoSucesor));
         }
     }else if (nodo->getCodigo() < codigo){
     	nodo->setDerecha(borrar(nodo->getDerecha(), codigo));
@@ -336,7 +364,16 @@ BSTNode<T> * BST<T>::borrar(BSTNode<T>* nodo, T codigo) {
 
 template <class T>
 void BST<T>::borrar(T codigo) {
-    this->raiz = borrar(this->raiz, codigo);
+	T error = "Dicho aeropuerto no existe por lo tanto no se pudo borrar";
+	T borradoExitoso = "Se elimino el aeropuerto con codigo IATA ";
+	BSTNode<T>* resultado = buscar(this->raiz, codigo);
+
+    if (resultado == NULL) {
+    	cout << error <<endl;
+    }else {
+    	this->raiz = borrar(this->raiz, codigo);
+    	cout << borradoExitoso<< codigo <<endl;
+    }
 }
 
 template <class T>
@@ -348,6 +385,7 @@ template <class T>
 bool BST<T>::vacio() {
     return this->raiz == NULL;
 }
+
 
 template <class T>
 void BST<T>::borrarTodo(BSTNode<T>* nodo) {
