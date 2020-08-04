@@ -1,8 +1,8 @@
 #ifndef AEROPUERTO_H
 #define AEROPUERTO_H
 
-using namespace std;
 #include <string>
+using namespace std;
 
 class Aeropuerto {
 private:

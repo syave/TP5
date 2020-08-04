@@ -74,7 +74,6 @@ void Menu::eliminarAeropuerto() {
 	cout << "Ingrese el codigo IATA del aeropuerto: ";
 	cin >> codigo;
 	bst.borrar(codigo);
-	cout <<"Aeropuerto con el codigo " << codigo << " eliminado correctamente." << endl;
 }
 
 void Menu::recorridoEnAncho() {
