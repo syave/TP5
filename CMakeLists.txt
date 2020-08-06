@@ -3,4 +3,4 @@ project(TP5)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(TP5 main.cpp Aeropuerto.cpp Archivo.cpp Menu.cpp Archivo.cpp ColaPrioridad.h)
+add_executable(TP5 main.cpp Aeropuerto.cpp Archivo.cpp Menu.cpp Archivo.cpp ColaPrioridad.h lista.h)
