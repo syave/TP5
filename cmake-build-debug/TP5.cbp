@@ -96,6 +96,9 @@
 		<Unit filename="/home/mlora/Escritorio/Git/algo2/TP5/Archivo.h">
 			<Option target="TP5"/>
 		</Unit>
+		<Unit filename="/home/mlora/Escritorio/Git/algo2/TP5/ColaPrioridad.h">
+			<Option target="TP5"/>
+		</Unit>
 		<Unit filename="/home/mlora/Escritorio/Git/algo2/TP5/Menu.cpp">
 			<Option target="TP5"/>
 		</Unit>
