@@ -177,6 +177,33 @@ Archivo.cpp.s:
 	$(MAKE) -f CMakeFiles/TP5.dir/build.make CMakeFiles/TP5.dir/Archivo.cpp.s
 .PHONY : Archivo.cpp.s
 
+Grafo.o: Grafo.cpp.o
+
+.PHONY : Grafo.o
+
+# target to build an object file
+Grafo.cpp.o:
+	$(MAKE) -f CMakeFiles/TP5.dir/build.make CMakeFiles/TP5.dir/Grafo.cpp.o
+.PHONY : Grafo.cpp.o
+
+Grafo.i: Grafo.cpp.i
+
+.PHONY : Grafo.i
+
+# target to preprocess a source file
+Grafo.cpp.i:
+	$(MAKE) -f CMakeFiles/TP5.dir/build.make CMakeFiles/TP5.dir/Grafo.cpp.i
+.PHONY : Grafo.cpp.i
+
+Grafo.s: Grafo.cpp.s
+
+.PHONY : Grafo.s
+
+# target to generate assembly for a file
+Grafo.cpp.s:
+	$(MAKE) -f CMakeFiles/TP5.dir/build.make CMakeFiles/TP5.dir/Grafo.cpp.s
+.PHONY : Grafo.cpp.s
+
 Menu.o: Menu.cpp.o
 
 .PHONY : Menu.o
@@ -246,6 +273,9 @@ help:
 	@echo "... Archivo.o"
 	@echo "... Archivo.i"
 	@echo "... Archivo.s"
+	@echo "... Grafo.o"
+	@echo "... Grafo.i"
+	@echo "... Grafo.s"
 	@echo "... Menu.o"
 	@echo "... Menu.i"
 	@echo "... Menu.s"
