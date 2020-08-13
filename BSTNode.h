@@ -1,5 +1,5 @@
-#ifndef ABB_BSTNODE_H
-#define ABB_BSTNODE_H
+#ifndef BSTNODE_H
+#define BSTNODE_H
 
 #include <string>
 #include "Aeropuerto.h"
@@ -16,22 +16,107 @@ private:
     BSTNode<T>* padre;
 
 public:
+    /*
+     * Pre : -
+     * Post: Inicia nodo del arbol con el codigo y puntero a aeropuerto
+     *       Los demas atributos vacios
+     */
     BSTNode(T codigo,Aeropuerto* aeropuerto);
+
+    /*
+     * Pre : -
+     * Post: Devuelve el codigo del aeropuerto
+     */
     string getCodigo();
+
+    /*
+    * Pre : -
+    * Post: Devuelve el puntero del aeropuerto.
+    */
     Aeropuerto* getAeropuerto();
+
+    /*
+     * Pre : -
+     * Post: Cambia el codigo del aeropuerto.
+     */
     void setCodigo(T codigo);
+
+    /*
+     * Pre : -
+     * Post: Cambia el puntero del aeropuerto.
+     */
     void setAeropuerto(Aeropuerto* aeropuerto);
+
+    /*
+     * Pre : -
+     * Post: Cambia el hijo derecho del nodo junto a su padre.
+     */
     void setDerecha(BSTNode<T>* derecha, BSTNode<T>* padre);
+
+    /*
+     * Pre : -
+     * Post: Cambia el hijo izquierdo del nodo junto a su padre.
+     */
     void setIzquierda(BSTNode<T>* izquierda, BSTNode<T>* padre);
+
+    /*
+     * Pre : -
+     * Post: Cambia el hijo izquierdo del nodo.
+     */
     void setIzquierda(BSTNode<T>* izquierda);
+
+    /*
+     * Pre : -
+     * Post: Cambia el hijo derecho del nodo.
+     */
     void setDerecha(BSTNode<T>* derecha);
+
+    /*
+     * Pre : -
+     * Post: Cambia el padre del nodo.
+     */
     void setPadre(BSTNode<T>* padre);
+
+    /*
+     * Pre : -
+     * Post: Devuelve el puntero al hijo derecho del nodo
+     */
     BSTNode<T>* getDerecha();
+
+    /*
+     * Pre : -
+     * Post: Devuelve el puntero al hijo izquierdo del nodo
+     */
     BSTNode<T>* getIzquierda();
+
+    /*
+     * Pre : -
+     * Post: Devuelve el puntero al padre del nodo
+     */
     BSTNode<T>* getPadre();
+
+    /*
+     * Pre : -
+     * Post: Devuelve true si no tiene hijo izquierdo ni derecho,caso contrario false
+     */
     bool esHoja();
+
+    /*
+     * Pre : -
+     * Post: Devuelve true si tiene hijo izquierdo pero no derecho,caso contrario false
+     */
     bool unicoHijoDerecho();
+
+    /*
+     * Pre : -
+     * Post: Devuelve true si tiene hijo izquierdo pero no izquierdo,caso contrario false
+     */
     bool unicoHijoIzquierdo();
+
+    /*
+    * Pre : -
+    * Post: Elimina aeropuerto del nodo
+    */
     ~BSTNode();
 };
 
@@ -122,7 +207,7 @@ bool BSTNode<T>::unicoHijoIzquierdo() {
 }
 template <class T>
 BSTNode<T>::~BSTNode() {
-    delete aeropuerto;
+    delete this->aeropuerto;
 }
 
 #endif //ABB_BSTNODE_H

@@ -3,8 +3,8 @@
 #include <string>
 using namespace std;
 
-#ifndef ABB_BST_H
-#define ABB_BST_H
+#ifndef BST_H
+#define BST_H
 
 template <class T>
 class BST {
@@ -13,56 +13,202 @@ private:
     BSTNode<T>* raiz;
 
     //metodos
+    /*
+     * Pre : -
+     * Post: Agrega al nodo el codigo y su puntero a aeropuerto
+     *       Si el codigo es menor a su padre,va a la izquierda,caso contrario a la derecha
+     */
     BSTNode<T>* agregar(BSTNode<T>* nodo, T codigo,Aeropuerto* &aeropuerto);
+
+    /*
+     * Pre : Nodo distinto de NULL
+     * Post: Imprime in orden los datos del aeropuerto del nodo y sus hijos
+     */
     void imprimirInOrden(BSTNode<T> * nodo);
+
+    /*
+     * Pre : -
+     * Post: Busca el codigo dado en el nodo. Si lo encuentra lo devuelve.
+     *       Caso contrario devuelve NULL
+     */
     BSTNode<T>* buscar(BSTNode<T>* nodo, T codigo);
+
+    /*
+     * Pre : -
+     * Post: Devuelve el codigo minimo del nodo y sus hijos
+     */
     T codigoMinimo(BSTNode<T>* nodo);
+
+    /*
+     * Pre : -
+     * Post: Devuelve el codigo maximo del nodo y sus hijos
+     */
     T codigoMaximo(BSTNode<T>* nodo);
+
+    /*
+     * Pre : -
+     * Post: Devuelve el codigo sucesor del nodo.Si no hay nodo devuelve NULL
+     */
     T codigoSucesor(BSTNode<T>* nodo);
+
+    /*
+     * Pre : -
+     * Post: Devuelve el codigo predecesor del nodo.Si no hay nodo devuelve NULL
+     */
     T codigoPredecesor(BSTNode<T>* nodo);
+
+    /*
+     * Pre : -
+     * Post: Borra el nodo del codigo dado.
+     *       Si el nodo es hoja,borra el nodo y el nodo apunta a NULL
+     *       Si el nodo tiene unico hijo izquierdo o derecho,este hijo apuntara a su padre y se borra el nodo
+     *       Si tiene 2 hijos,busca el sucesor o predecesor y reemplaza sus valores,y borra el nodo.
+     */
     BSTNode<T>* borrar(BSTNode<T>* nodo, T codigo);
+
+    /*
+     * Pre : -
+     * Post: Borra todos los nodos incluido sus hijos izquierdo y derecho si es que lo tienen
+     */
     void borrarTodo(BSTNode<T>* nodo);
 
+    /*
+     * Pre : -
+     * Post: DEvuelve la altura del arbol. Si no hay nodo, devuelve NULL
+     */
     int alturaArbol(BSTNode<T>* nodo);
+
+    /*
+     * Pre : Debe existir la altura del arbol
+     * Post: Imprime por nivel los codigos IATA
+     */
     void imprimirPorNivel(BSTNode<T>* nodo,int nivel);
+
+    /*
+     * Pre : Nodo distinto de NULL. Debe existir altura del arbol
+     * Post: Imprime en ancho el codigo del aeropuerto del nodo y sus hijos
+     */
     void imprimirEnAncho(BSTNode<T>* nodo);
+
+    /*
+     * Pre : -
+     * Post: Imprime codigo y datos del aeropuerto del nodo dado
+     */
     void imprimirAeropuertos(BSTNode<T>* nodo);
+
+    /*
+     * Pre : -
+     * Post: Imprime los codigos del nodo dado
+     */
     void imprimirCodigos(BSTNode<T>* nodo);
+
+    /*
+     * Pre : -
+     * Post: Devuelve puntero del sucesor del nodo
+     */
     Aeropuerto* aeropuertoSucesor(BSTNode<T>* nodo);
-    //Aeropuerto* aeropuertoPredecesor(BSTNode<T>* nodo);
+
+    /*
+    * Pre : -
+    * Post: Devuelve el puntero del minimo aeropuerto del nodo
+    */
     Aeropuerto* minimoAeropuerto(BSTNode<T>* nodo);
-    //Aeropuerto* maximoAeropuerto(BSTNode<T>* nodo);
 public:
     //metodos
 
+    /*
+     * Pre : -
+     * Post: Inicia el arbol con su atributo raiz vacio
+     */
     BST();
 
+    /*
+     * Pre : -
+     * Post:  LLama a recursiva de agregar
+     *        Agrega al nodo,un codigo y un puntero a aeropuerto
+     */
     void agregar(T codigo,Aeropuerto* &aeropuerto);
 
+    /*
+     * Pre : -
+     * Post:   Llama a recursiva de imprimir in orden
+     *         Imprime in orden desde la raiz
+     */
     void imprimirInOrden();
 
+    /*
+     * Pre : -
+     * Post: LLama a recursiva de buscar.
+     *       Si es NULL,imprime mensaje.Caso contrario devuelve datos del aeropuerto del codigo dado
+     */
     void buscar(T codigo);
 
+    /*
+     * Pre : -
+     * Post: LLama a recursiva de imprimir en ancho.
+     *       Imprime en ancho desde la raiz
+     */
     void imprimirEnAncho();
 
+    /*
+     * Pre : -
+     * Post: LLama a recursiva de codigo minimo.
+     */
     T codigoMinimo();
 
+    /*
+     * Pre : -
+     * Post: LLama a recursiva de codigo maximo.
+     */
     T codigoMaximo();
 
+    /*
+     * Pre : -
+     * Post: LLama a recursiva de codigo sucesor dado un codigo.
+     */
     T codigoSucesor(T codigo);
 
+    /*
+     * Pre : -
+     * Post: LLama a recursiva de codigo predecesor dado un codigo.
+     */
     T codigoPredecesor(T codigo);
 
-    //Puntero al aeropuerto del nodo sucesor
+    /*
+     * Pre : -
+     * Post: Devuelve puntero del aeropuerto del nodo sucesor del codigo
+     */
     Aeropuerto* aeropuertoSucesor(T codigo);
-    //Aeropuerto* aeropuertoPredecesor(T codigo);
 
+    /*
+     * Pre : -
+     * Post: LLama a recursiva de buscar.
+     *       Si lo encuentra lo borra usando recursiva de borrar,sino imprime mensaje de error
+     */
     void borrar(T codigo);
 
+    /*
+     * Pre : -
+     * Post: Devuelve el nodo raiz
+     */
     BSTNode<T>* getRaiz();
+
+    /*
+     * Pre : -
+     * Post: Devuelve true si no hay nodos.caso contrario false
+     */
     bool vacio();
 
+    /*
+     * Pre : -
+     * Post: LLama a recursiva de borrar
+     */
     void borrarTodo();
+
+    /*
+     * Pre : -
+     * Post: Borra todos los nodos del arbol
+     */
     ~BST<T>();
 
 };
@@ -107,12 +253,13 @@ void BST<T>::imprimirInOrden() {
 
 template <class T>
 void BST<T>::imprimirAeropuertos(BSTNode<T>* nodo){
-    cout<< "Codigo IATA: " << nodo->getCodigo()<<std::endl;
+    imprimirCodigos(nodo);
     nodo->getAeropuerto()->mostrarAeropuerto();
 }
 
 template <class T>
 void BST<T>::imprimirCodigos(BSTNode<T>* nodo){
+    cout << "--------------------------------------" << endl;
 	cout<< "Codigo IATA: " << nodo->getCodigo()<<std::endl;
 }
 
@@ -153,9 +300,9 @@ void BST<T>::imprimirEnAncho(BSTNode<T>* nodo) {
 	int altura = alturaArbol(nodo);
 	//IMPRESION POR NIVEL
 	for (int i=0; i<altura; i++) {
-		cout<<"Nivel " << i<<endl;
+		//cout<<"Nivel " << i<<endl;
 		imprimirPorNivel(nodo, i);
-	    cout<<"\n";
+	    //cout<<"\n";
 	}
 }
 
@@ -246,7 +393,7 @@ T BST<T>::codigoSucesor(BSTNode<T>* nodo) {
 template <class T>
 T BST<T>::codigoSucesor(T codigo) {
 	BSTNode<T>* codigoNodo = this->buscar(this->raiz, codigo);
-    // Return the key. If the key is not found or successor is not found, return -1
+	//Regresa el codigo. Si no se encuentra, retorna NULL
     if(codigoNodo == NULL) {
         return NULL;
     }else {
@@ -301,7 +448,7 @@ T BST<T>::codigoPredecesor(BSTNode<T> * nodo) {
     BSTNode<T>* ancestro = this->raiz;
     while(ancestro != nodo) {
         if(nodo->getCodigo() > ancestro->getCodigo()) {
-        	sucesor = ancestro; // so far this is the deepest node for which current node is in left
+        	sucesor = ancestro; // Ultimo nodo,en el que el nodo actual esta en la izquierda
         	ancestro = ancestro->getDerecha();
         }
         else
@@ -325,25 +472,23 @@ template <class T>
 BSTNode<T> * BST<T>::borrar(BSTNode<T>* nodo, T codigo) {
     if (nodo->getCodigo() == codigo) {
         if (nodo->esHoja()) {
+            delete nodo;
             nodo = NULL;
-            //nodo->getAeropuerto() == NULL;
         }else if (nodo->unicoHijoDerecho()) {
-            // The only child will be connected to the parent's of node directly
+            //Unico hijo estara conectado a su padre directamente
         	nodo->getDerecha()->setPadre(nodo->getPadre());
-            // Bypass node
             BSTNode<T>* aux = nodo;
             nodo = nodo->getDerecha();
             delete aux;
         }else if (nodo->unicoHijoIzquierdo()) {
-            // The only child will be connected to the parent's of node directly
+            //Unico hijo estara conectado a su padre directamente
         	nodo->getIzquierda()->setPadre(nodo->getPadre());
-            // Bypass node
             BSTNode<T>* aux = nodo;
             nodo = nodo->getIzquierda();
             delete aux;
         }
         else {  //Nodo con 2 hijos
-            // Find successor or predecessor to avoid quarrel
+            // Encuentro sucesor o predecesor para evitar problemas
             T codigoSucesor = this->codigoSucesor(codigo);
             Aeropuerto* aeropuertoSucesor = this->aeropuertoSucesor(codigo);
 
@@ -403,7 +548,7 @@ void BST<T>::borrarTodo() {
 
 template <class T>
 BST<T>::~BST<T>() {
-	borrarTodo();
+	this->borrarTodo();
 }
 
 
