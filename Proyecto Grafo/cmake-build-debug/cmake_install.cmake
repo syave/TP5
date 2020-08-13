@@ -1,4 +1,4 @@
-# Install script for directory: /home/mlora/Escritorio/Proyectos CLion/Grafos_TP5
+# Install script for directory: /home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

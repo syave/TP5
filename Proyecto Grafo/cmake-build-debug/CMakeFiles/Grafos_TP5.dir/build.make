@@ -43,10 +43,10 @@ RM = /home/mlora/CLion/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5"
+CMAKE_SOURCE_DIR = "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/cmake-build-debug"
+CMAKE_BINARY_DIR = "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Grafos_TP5.dir/depend.make
@@ -59,107 +59,107 @@ include CMakeFiles/Grafos_TP5.dir/flags.make
 
 CMakeFiles/Grafos_TP5.dir/main.cpp.o: CMakeFiles/Grafos_TP5.dir/flags.make
 CMakeFiles/Grafos_TP5.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Grafos_TP5.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Grafos_TP5.dir/main.cpp.o -c "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Grafos_TP5.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Grafos_TP5.dir/main.cpp.o -c "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/main.cpp"
 
 CMakeFiles/Grafos_TP5.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Grafos_TP5.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/main.cpp" > CMakeFiles/Grafos_TP5.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/main.cpp" > CMakeFiles/Grafos_TP5.dir/main.cpp.i
 
 CMakeFiles/Grafos_TP5.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Grafos_TP5.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/main.cpp" -o CMakeFiles/Grafos_TP5.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/main.cpp" -o CMakeFiles/Grafos_TP5.dir/main.cpp.s
 
 CMakeFiles/Grafos_TP5.dir/Aeropuerto.cpp.o: CMakeFiles/Grafos_TP5.dir/flags.make
 CMakeFiles/Grafos_TP5.dir/Aeropuerto.cpp.o: ../Aeropuerto.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Grafos_TP5.dir/Aeropuerto.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Grafos_TP5.dir/Aeropuerto.cpp.o -c "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/Aeropuerto.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Grafos_TP5.dir/Aeropuerto.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Grafos_TP5.dir/Aeropuerto.cpp.o -c "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Aeropuerto.cpp"
 
 CMakeFiles/Grafos_TP5.dir/Aeropuerto.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Grafos_TP5.dir/Aeropuerto.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/Aeropuerto.cpp" > CMakeFiles/Grafos_TP5.dir/Aeropuerto.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Aeropuerto.cpp" > CMakeFiles/Grafos_TP5.dir/Aeropuerto.cpp.i
 
 CMakeFiles/Grafos_TP5.dir/Aeropuerto.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Grafos_TP5.dir/Aeropuerto.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/Aeropuerto.cpp" -o CMakeFiles/Grafos_TP5.dir/Aeropuerto.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Aeropuerto.cpp" -o CMakeFiles/Grafos_TP5.dir/Aeropuerto.cpp.s
 
 CMakeFiles/Grafos_TP5.dir/Archivo.cpp.o: CMakeFiles/Grafos_TP5.dir/flags.make
 CMakeFiles/Grafos_TP5.dir/Archivo.cpp.o: ../Archivo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Grafos_TP5.dir/Archivo.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Grafos_TP5.dir/Archivo.cpp.o -c "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/Archivo.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Grafos_TP5.dir/Archivo.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Grafos_TP5.dir/Archivo.cpp.o -c "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Archivo.cpp"
 
 CMakeFiles/Grafos_TP5.dir/Archivo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Grafos_TP5.dir/Archivo.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/Archivo.cpp" > CMakeFiles/Grafos_TP5.dir/Archivo.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Archivo.cpp" > CMakeFiles/Grafos_TP5.dir/Archivo.cpp.i
 
 CMakeFiles/Grafos_TP5.dir/Archivo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Grafos_TP5.dir/Archivo.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/Archivo.cpp" -o CMakeFiles/Grafos_TP5.dir/Archivo.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Archivo.cpp" -o CMakeFiles/Grafos_TP5.dir/Archivo.cpp.s
 
 CMakeFiles/Grafos_TP5.dir/Arista.cpp.o: CMakeFiles/Grafos_TP5.dir/flags.make
 CMakeFiles/Grafos_TP5.dir/Arista.cpp.o: ../Arista.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Grafos_TP5.dir/Arista.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Grafos_TP5.dir/Arista.cpp.o -c "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/Arista.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Grafos_TP5.dir/Arista.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Grafos_TP5.dir/Arista.cpp.o -c "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Arista.cpp"
 
 CMakeFiles/Grafos_TP5.dir/Arista.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Grafos_TP5.dir/Arista.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/Arista.cpp" > CMakeFiles/Grafos_TP5.dir/Arista.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Arista.cpp" > CMakeFiles/Grafos_TP5.dir/Arista.cpp.i
 
 CMakeFiles/Grafos_TP5.dir/Arista.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Grafos_TP5.dir/Arista.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/Arista.cpp" -o CMakeFiles/Grafos_TP5.dir/Arista.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Arista.cpp" -o CMakeFiles/Grafos_TP5.dir/Arista.cpp.s
 
 CMakeFiles/Grafos_TP5.dir/Grafo.cpp.o: CMakeFiles/Grafos_TP5.dir/flags.make
 CMakeFiles/Grafos_TP5.dir/Grafo.cpp.o: ../Grafo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Grafos_TP5.dir/Grafo.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Grafos_TP5.dir/Grafo.cpp.o -c "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/Grafo.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Grafos_TP5.dir/Grafo.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Grafos_TP5.dir/Grafo.cpp.o -c "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Grafo.cpp"
 
 CMakeFiles/Grafos_TP5.dir/Grafo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Grafos_TP5.dir/Grafo.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/Grafo.cpp" > CMakeFiles/Grafos_TP5.dir/Grafo.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Grafo.cpp" > CMakeFiles/Grafos_TP5.dir/Grafo.cpp.i
 
 CMakeFiles/Grafos_TP5.dir/Grafo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Grafos_TP5.dir/Grafo.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/Grafo.cpp" -o CMakeFiles/Grafos_TP5.dir/Grafo.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Grafo.cpp" -o CMakeFiles/Grafos_TP5.dir/Grafo.cpp.s
 
 CMakeFiles/Grafos_TP5.dir/Menu.cpp.o: CMakeFiles/Grafos_TP5.dir/flags.make
 CMakeFiles/Grafos_TP5.dir/Menu.cpp.o: ../Menu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Grafos_TP5.dir/Menu.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Grafos_TP5.dir/Menu.cpp.o -c "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/Menu.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Grafos_TP5.dir/Menu.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Grafos_TP5.dir/Menu.cpp.o -c "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Menu.cpp"
 
 CMakeFiles/Grafos_TP5.dir/Menu.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Grafos_TP5.dir/Menu.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/Menu.cpp" > CMakeFiles/Grafos_TP5.dir/Menu.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Menu.cpp" > CMakeFiles/Grafos_TP5.dir/Menu.cpp.i
 
 CMakeFiles/Grafos_TP5.dir/Menu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Grafos_TP5.dir/Menu.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/Menu.cpp" -o CMakeFiles/Grafos_TP5.dir/Menu.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Menu.cpp" -o CMakeFiles/Grafos_TP5.dir/Menu.cpp.s
 
 CMakeFiles/Grafos_TP5.dir/Vertice.cpp.o: CMakeFiles/Grafos_TP5.dir/flags.make
 CMakeFiles/Grafos_TP5.dir/Vertice.cpp.o: ../Vertice.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Grafos_TP5.dir/Vertice.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Grafos_TP5.dir/Vertice.cpp.o -c "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/Vertice.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Grafos_TP5.dir/Vertice.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Grafos_TP5.dir/Vertice.cpp.o -c "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Vertice.cpp"
 
 CMakeFiles/Grafos_TP5.dir/Vertice.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Grafos_TP5.dir/Vertice.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/Vertice.cpp" > CMakeFiles/Grafos_TP5.dir/Vertice.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Vertice.cpp" > CMakeFiles/Grafos_TP5.dir/Vertice.cpp.i
 
 CMakeFiles/Grafos_TP5.dir/Vertice.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Grafos_TP5.dir/Vertice.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/Vertice.cpp" -o CMakeFiles/Grafos_TP5.dir/Vertice.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Vertice.cpp" -o CMakeFiles/Grafos_TP5.dir/Vertice.cpp.s
 
 CMakeFiles/Grafos_TP5.dir/Vuelos.cpp.o: CMakeFiles/Grafos_TP5.dir/flags.make
 CMakeFiles/Grafos_TP5.dir/Vuelos.cpp.o: ../Vuelos.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Grafos_TP5.dir/Vuelos.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Grafos_TP5.dir/Vuelos.cpp.o -c "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/Vuelos.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Grafos_TP5.dir/Vuelos.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Grafos_TP5.dir/Vuelos.cpp.o -c "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Vuelos.cpp"
 
 CMakeFiles/Grafos_TP5.dir/Vuelos.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Grafos_TP5.dir/Vuelos.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/Vuelos.cpp" > CMakeFiles/Grafos_TP5.dir/Vuelos.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Vuelos.cpp" > CMakeFiles/Grafos_TP5.dir/Vuelos.cpp.i
 
 CMakeFiles/Grafos_TP5.dir/Vuelos.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Grafos_TP5.dir/Vuelos.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/Vuelos.cpp" -o CMakeFiles/Grafos_TP5.dir/Vuelos.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Vuelos.cpp" -o CMakeFiles/Grafos_TP5.dir/Vuelos.cpp.s
 
 # Object files for target Grafos_TP5
 Grafos_TP5_OBJECTS = \
@@ -185,7 +185,7 @@ Grafos_TP5: CMakeFiles/Grafos_TP5.dir/Vertice.cpp.o
 Grafos_TP5: CMakeFiles/Grafos_TP5.dir/Vuelos.cpp.o
 Grafos_TP5: CMakeFiles/Grafos_TP5.dir/build.make
 Grafos_TP5: CMakeFiles/Grafos_TP5.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Grafos_TP5"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Grafos_TP5"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Grafos_TP5.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -198,6 +198,6 @@ CMakeFiles/Grafos_TP5.dir/clean:
 .PHONY : CMakeFiles/Grafos_TP5.dir/clean
 
 CMakeFiles/Grafos_TP5.dir/depend:
-	cd "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5" "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5" "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/cmake-build-debug" "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/cmake-build-debug" "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/cmake-build-debug/CMakeFiles/Grafos_TP5.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo" "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo" "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/cmake-build-debug" "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/cmake-build-debug" "/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/cmake-build-debug/CMakeFiles/Grafos_TP5.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/Grafos_TP5.dir/depend
 
