@@ -1,0 +1,104 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Aeropuerto.cpp
+Aeropuerto.h
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Aeropuerto.h
+
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Aeropuerto.h
+string
+-
+
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Archivo.cpp
+Archivo.h
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Archivo.h
+
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Archivo.h
+Vuelos.h
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Vuelos.h
+Aeropuerto.h
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Aeropuerto.h
+Grafo.h
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Grafo.h
+fstream
+-
+iostream
+-
+
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Arista.cpp
+Arista.h
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Arista.h
+
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Arista.h
+iostream
+-
+
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/ColaPrioridad.h
+string
+-
+Nodo.h
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Nodo.h
+
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Grafo.cpp
+Grafo.h
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Grafo.h
+
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Grafo.h
+iostream
+-
+string
+-
+Lista.h
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Lista.h
+Vertice.h
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Vertice.h
+ColaPrioridad.h
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/ColaPrioridad.h
+
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Lista.h
+Nodo.h
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Nodo.h
+
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Menu.cpp
+Menu.h
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Menu.h
+
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Menu.h
+Archivo.h
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Archivo.h
+Grafo.h
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Grafo.h
+
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Nodo.h
+
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Vertice.cpp
+Vertice.h
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Vertice.h
+
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Vertice.h
+string
+-
+iostream
+-
+Arista.h
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Arista.h
+Lista.h
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Lista.h
+
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Vuelos.cpp
+Vuelos.h
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Vuelos.h
+
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Vuelos.h
+Aeropuerto.h
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Aeropuerto.h
+
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/main.cpp
+Menu.h
+/home/mlora/Escritorio/Git/algo2/TP5/Proyecto Grafo/Menu.h
+
