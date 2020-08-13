@@ -63,7 +63,6 @@ unsigned Aeropuerto::getDestinosInternacionales() {
 }
 
 void Aeropuerto::mostrarAeropuerto() {
-    cout << "--------------------------------------" << endl;
 	cout << "* Nombre: " + getNombre()<<endl;
 	cout << "* Ciudad: " + getCiudad()<<endl;
 	cout << "* Pais: " + getPais()<<endl;

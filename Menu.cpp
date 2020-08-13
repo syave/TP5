@@ -41,41 +41,58 @@ void Menu::agregarAeropuerto() {
 	string codigo,nombre,ciudad,pais;
 	double superficie;
 	unsigned terminal,daestinosNacionales,destinosInternacionales;
-
-	codigo = obtenerCodigoIata();
-	nombre = obtenerNombreAeropuerto();
-    pais = obtenerPais();
-    ciudad = obtenerCiudad();
-    superficie = obtenerSuperficie();
-    terminal = obtenerTerminales();
-    daestinosNacionales = obtenerDestinosNacionales();
-    destinosInternacionales = obtenerDestinosInternacionales();
-
-    cargarDatos(codigo,nombre,ciudad,pais,superficie,terminal,daestinosNacionales,destinosInternacionales);
+	Aeropuerto* aeropuerto = new Aeropuerto;
+	cout << "Ingrese el codigo IATA: ";
+	cin >> codigo;
+	cout << "Ingrese el nombre del aeropuerto: ";
+	cin >> nombre;
+	cout << "Ingrese el pais del aeropuerto: ";
+	cin >> pais;
+	cout << "Ingrese la ciudad del aeropuerto: ";
+	cin >> ciudad;
+	cout << "Ingrese la superficie del aeropuerto: ";
+	cin >> superficie;
+	cout << "Ingrese la cantidad de terminales del aeropuerto: ";
+	cin >> terminal;
+	cout << "Ingrese la cantidad de destinos nacionales: ";
+	cin >> daestinosNacionales;
+	cout << "Ingrese la cantidad de destinos internacionales: ";
+	cin >> destinosInternacionales;
+	aeropuerto->setCiudad(ciudad);
+	aeropuerto->setNombre(nombre);
+	aeropuerto->setPais(pais);
+	aeropuerto->setSuperficie(superficie);
+	aeropuerto->setTerminal(terminal);
+	aeropuerto->setDestinosNacionales(daestinosNacionales);
+	aeropuerto->setDestinosInternacionales(destinosInternacionales);
+	bst.agregar(codigo, aeropuerto);
+	cout << "Se agrego el Aeropuerto " << aeropuerto->getNombre() << endl;
 }
 
 void Menu::eliminarAeropuerto() {
 	string codigo;
-	codigo = obtenerCodigoIata();
-    diccionario.borrar(codigo);
+	cout << "Ingrese el codigo IATA del aeropuerto: ";
+	cin >> codigo;
+	bst.borrar(codigo);
 }
 
 void Menu::recorridoEnAncho() {
-    diccionario.imprimirEnAncho();
+	bst.imprimirEnAncho();
 }
 
 void Menu::recorridoInOrden() {
-    diccionario.imprimirInOrden();
+	bst.imprimirInOrden();
 }
 
 void Menu::consultarAeropuerto() {
-	string codigo;
-    codigo = obtenerCodigoIata();
-    diccionario.buscar(codigo);
+	string codigo,resultadoBusqueda;
+	cout << "Ingrese el codigo IATA del aeropuerto a consultar: ";
+	cin >> codigo;
+	bst.buscar(codigo);
 }
 
 void Menu::cargarAeropuertos() {
-	archivo.cargarArchivo(diccionario);
+	archivo.cargarArchivo(bst);
 }
 void Menu::limpiarPantalla(){
 
@@ -117,70 +134,5 @@ void Menu::verificar(unsigned & entrada) {
 
 void Menu::mensaje(){
 	cout << "Entrada no valida.Por favor Intente de nuevo.\n";
-}
-
-string Menu::obtenerCodigoIata() {
-    string codigo;
-    cout << "Ingrese el codigo IATA del aeropuerto: ";
-    cin >> codigo;
-    return codigo;
-}
-string Menu::obtenerNombreAeropuerto() {
-    string nombre;
-    cout << "Ingrese el nombre del aeropuerto: ";
-    cin >> nombre;
-    return nombre;
-}
-string Menu::obtenerPais() {
-    string pais;
-    cout << "Ingrese el pais del aeropuerto: ";
-    cin >> pais;
-    return pais;
-}
-string Menu::obtenerCiudad() {
-    string ciudad;
-    cout << "Ingrese la ciudad del aeropuerto: ";
-    cin >> ciudad;
-    return ciudad;
-}
-
-double Menu::obtenerSuperficie() {
-    double superficie;
-    cout << "Ingrese la superficie del aeropuerto: ";
-    cin >> superficie;
-}
-
-unsigned Menu::obtenerTerminales() {
-    unsigned terminal;
-    cout << "Ingrese la cantidad de terminales del aeropuerto: ";
-    cin >> terminal;
-    return terminal;
-}
-
-unsigned Menu::obtenerDestinosNacionales() {
-    unsigned daestinosNacionales;
-    cout << "Ingrese la cantidad de destinos nacionales: ";
-    cin >> daestinosNacionales;
-    return daestinosNacionales;
-}
-
-unsigned Menu::obtenerDestinosInternacionales() {
-    unsigned destinosInternacionales;
-    cout << "Ingrese la cantidad de destinos internacionales: ";
-    cin >> destinosInternacionales;
-    return destinosInternacionales;
-}
-
-void Menu::cargarDatos(string codigo,string nombre,string ciudad,string pais,double superficie,unsigned terminal,unsigned daestinosNacionales,unsigned destinosInternacionales) {
-    Aeropuerto* aeropuerto = new Aeropuerto;
-    aeropuerto->setCiudad(ciudad);
-    aeropuerto->setNombre(nombre);
-    aeropuerto->setPais(pais);
-    aeropuerto->setSuperficie(superficie);
-    aeropuerto->setTerminal(terminal);
-    aeropuerto->setDestinosNacionales(daestinosNacionales);
-    aeropuerto->setDestinosInternacionales(destinosInternacionales);
-    diccionario.agregar(codigo, aeropuerto);
-    cout << "Se agrego el Aeropuerto " << aeropuerto->getNombre() << endl;
 }
 

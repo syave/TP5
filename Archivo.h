@@ -13,23 +13,9 @@ private:
 	Aeropuerto* puntero;
 	ifstream archivo;
 public:
-
-    /*
-    * Pre : -
-    * Post: Inicia el archivo con sus atributos vacios.
-    */
 	Archivo();
-
-    /*
-    * Pre : -
-    * Post: Destructor.
-    */
 	~Archivo();
 
-    /*
-    * Pre : -
-    * Post: Carga desde el archivo indicado los elementos.
-    */
 	void cargarArchivo(BST<string> &bst);
 };
 
