@@ -491,13 +491,16 @@ BSTNode<T> * BST<T>::borrar(BSTNode<T>* nodo, T codigo) {
             // Encuentro sucesor o predecesor para evitar problemas
             T codigoSucesor = this->codigoSucesor(codigo);
             Aeropuerto* aeropuertoSucesor = this->aeropuertoSucesor(codigo);
+            //Encuentro puntero a aeropuerto del nodo
+            Aeropuerto* aeropuerto = nodo->getAeropuerto();
 
             //Reemplazo el nodo con los valores del sucesor
             nodo->setAeropuerto(aeropuertoSucesor);
             nodo->setCodigo(codigoSucesor);
 
-            //Borro datos del anterior sucesor
+            //Borro datos del anterior sucesor y aeropuerto
             nodo->setDerecha(borrar(nodo->getDerecha(), codigoSucesor));
+            delete aeropuerto;
         }
     }else if (nodo->getCodigo() < codigo){
     	nodo->setDerecha(borrar(nodo->getDerecha(), codigo));
