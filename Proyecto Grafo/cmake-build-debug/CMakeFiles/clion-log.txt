@@ -1,0 +1,4 @@
+/home/mlora/CLion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home/mlora/Escritorio/Proyectos CLion/Grafos_TP5"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/mlora/Escritorio/Proyectos CLion/Grafos_TP5/cmake-build-debug

@@ -37,6 +37,23 @@ void Menu::mostrarMenu() {
 	}
 }
 
+//void Menu::mostrarMenu2() {
+//    cargarGrafo();
+//    while (entrada != 0) {
+//        menuOpciones2();
+//        cin >> entrada;
+//        validarEntrada(entrada, 6);
+//        switch (entrada) {
+//            case 1: //Cargar archivo
+//
+//
+//        }
+//    }
+//}
+
+
+
+
 void Menu::agregarAeropuerto() {
 	string codigo,nombre,ciudad,pais;
 	double superficie;

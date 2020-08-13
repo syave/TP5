@@ -6,7 +6,7 @@ int main() {
 //------------------------BST--------------------------------------//
 
 	Menu menu;
-	menu.mostrarMenu();
+	menu.mostrarMenu1();
 
 	return 0;
 }
